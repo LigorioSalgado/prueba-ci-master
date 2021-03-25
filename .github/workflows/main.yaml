@@ -13,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     # aqui le digo a mi CI en donde se va ejecutar
     steps:
-    #Son los pasos que tengo que hacer para que build funcione
     - uses: actions/checkout@v2
+    #Son los pasos que tengo que hacer para que build funcione
     #que verion de github actions va a ocupar 
     - name: Build image Docker
     # nombra el paso en el que estas
@@ -26,7 +26,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Tests API
-    - uses: actions/setup-node@v1
+      uses: actions/setup-node@v1
     - with:
         node-version: '12.x'
     - run: npm ci
