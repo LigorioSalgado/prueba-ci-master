@@ -4,7 +4,9 @@ const UserService = require('../services/UserServices');
 const create = async(req,res) =>{
     try{
         const user = await UserService.createUser(req.body);
-        return res.status(201).send(user);
+        //hice mucho codigo aqui
+        const mensaje = {"mensaje":"usuario creado"}
+        return res.status(201).send(mensaje);
     }catch(error){
         
        return res.status(400).send(error);
