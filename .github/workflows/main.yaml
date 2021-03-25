@@ -18,7 +18,7 @@ jobs:
     #que verion de github actions va a ocupar 
     - name: Build image Docker
     # nombra el paso en el que estas
-    - run: docker build . --file Dockerfile --tag api-mongoose-v1
+      run: docker build . --file Dockerfile --tag api-mongoose-v1
     #ejecuta un comando especifico
   test:
     runs-on: ubuntu-latest
@@ -29,6 +29,6 @@ jobs:
       uses: actions/setup-node@v1
     - with:
         node-version: '12.x'
-    - run: npm ci
-    - run: npm test
+      run: npm ci
+      run: npm test
 
