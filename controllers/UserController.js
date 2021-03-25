@@ -5,8 +5,8 @@ const create = async(req,res) =>{
     try{
         const user = await UserService.createUser(req.body);
         //hice mucho codigo aqui
-        const mensaje = {"mensaje":"usuario creado"}
-        return res.status(201).send(mensaje);
+        //const mensaje = {"mensaje":"usuario creado"}
+        return res.status(201).send(user);
     }catch(error){
         
        return res.status(400).send(error);
