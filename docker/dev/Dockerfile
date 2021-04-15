@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 #Aqui le digo a docker donde va estar trabajando mi container
 #/opt/app
 
-COPY package.json ./ 
+COPY package*.json ./ 
 #copia los package y muevelos al WORKDIR
 
 RUN npm install 
