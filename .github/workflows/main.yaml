@@ -20,7 +20,7 @@ jobs:
     - name: Login al Heroku Registry
       env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: echo 'key ---> $HEROKU_API_KEY'
+      run: echo 'key ---> "$env:HEROKU_API_KEY"'
     - name: Build & push de mi imagen
       env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
