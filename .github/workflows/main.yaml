@@ -18,10 +18,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Login al Heroku Registry
-      shell: bash
       env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: echo 'key ---> "$HEROKU_API_KEY"'
+      run: echo key ---> ${#HEROKU_API_KEY}
     - name: Build & push de mi imagen
       env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
